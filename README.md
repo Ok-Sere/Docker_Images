@@ -156,6 +156,54 @@ Finally, pull the Docker image from the repository to verify it was successfully
 
 ---
 
-## Summary
-This guide provides a comprehensive overview of working with Docker images, from pulling and building images to pushing and pulling them from a repository. By following these steps, you can efficiently manage Docker images and containers, enabling seamless application deployment and scaling. Docker simplifies the process of packaging and distributing applications, making it an essential tool for modern software development.
+# Docker Containers and Simple Commands
+
+## Docker Commands and Troubleshooting
+
+1. **Running a Docker Container**  
+   This image demonstrates the `docker run` command, which is used to create and start a container from a specified image. The command can include options to map ports, set environment variables, and more.
+
+   ![20](./img/20.%20Docker%20run.jpg)
+
+2. **Starting a Container and Troubleshooting**  
+   This image shows the process of starting a stopped container using the `docker start` command. It also highlights basic troubleshooting steps, such as checking container logs with `docker logs <container_id>` to identify issues if the container fails to start.
+
+   ![21](./img/21.%20start%20plus%20trouble%20shoot.jpg)
+
+   **Troubleshooting Process:**
+   - Use `docker ps -a` to list all containers and identify the container ID or name.
+   - Run `docker logs <container_id>` to view the logs and diagnose the issue.
+   - If the issue persists, inspect the container using `docker inspect <container_id>` for detailed configuration and error information.
+   - Restart the container with `docker restart <container_id>` after resolving the issue.
+
+3. **Stopping a Docker Container**  
+   This image illustrates the `docker stop` command, which gracefully stops a running container by sending a SIGTERM signal.
+
+   ![22](./img/22.%20docker%20stop.jpg)
+
+4. **Restarting a Docker Container**  
+   This image shows the `docker restart` command, which stops and then starts a container in one step.
+
+   ![23](./img/23.%20docker%20restart.jpg)
+
+5. **Removing a Docker Container**  
+   This image demonstrates the `docker rm` command, which is used to delete a stopped container. Ensure the container is not running before attempting to remove it.
+
+   ![24](./img/24.%20docker%20remove.jpg)
+
+---
+
+## Project Summary
+
+This project provided a comprehensive guide to working with Docker images and containers. It covered the following key steps:
+
+1. Setting up an EC2 instance to host Docker containers.
+2. Pulling and verifying the Nginx Docker image.
+3. Creating and editing files for a static web page.
+4. Building and tagging Docker images.
+5. Pushing and pulling images from Docker Hub.
+6. Running and managing Docker containers using essential commands.
+7. Troubleshooting container issues using logs and inspection tools.
+
+By following these steps, users gained hands-on experience with Docker's core functionalities, enabling them to containerize applications and deploy them effectively.
 
